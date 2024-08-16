@@ -24,11 +24,18 @@ export default function useOrder() {
     const updateOrder = order.filter((update)=>update.id !== id)
     setOrder(updateOrder)
   }
+
+ const guardarOrden =()=>{
+  setOrder([])
+  setTip(0)
+ }
+
   return {
     order,
     tip,
     setTip,
     addItem,
-    deleteOrder
+    deleteOrder,
+    guardarOrden
   };
 }
