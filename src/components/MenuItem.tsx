@@ -10,8 +10,8 @@ export const MenuItem = ({ item, addItem }: MenuItemProps) => {
     <button className=" border-2 rounded-xl border-red-600 hover:bg-teal-300 w-full p-3 flex justify-between mb-3"
     onClick={()=>addItem(item)}
     >
-      <p>Name{item.name}</p>
-      <p className="font-black">Precio{item.price}</p>
+      <p>{item.name}</p>
+      <p className="font-black">{item.price}</p>
     </button>
   );
 };

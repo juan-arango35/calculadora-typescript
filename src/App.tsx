@@ -1,10 +1,11 @@
 import { MenuItem } from "./components/MenuItem";
 import { menuItems } from "./data/db";
 import useOrder from "./components/hooks/useOrder";
+import Consumo from "./components/Consumo";
 
 function App() {
 
-  const {addItem} = useOrder()
+  const {order, addItem, deleteOrder} = useOrder()
   return (
     <>
       <header className=" bg-teal-400 py-5">
@@ -25,7 +26,10 @@ function App() {
          
         </div>
         <div className=" bg-yellow-300">
-          <h2 className=" text-center text-sm font-black">Consumo</h2>
+          <Consumo
+          order={order}
+          deleteOrder={deleteOrder}
+          />
         </div>
       </main>
     </>
